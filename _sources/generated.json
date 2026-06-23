@@ -1,0 +1,59 @@
+{
+    "pinga": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pinga",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-Hos+/kuU3rWKdbV21HMt5cBBzwxSaj91iPc8ugeyBIw=",
+            "type": "tarball",
+            "url": "https://css-ig.net/bin/pinga-win64.zip"
+        },
+        "version": "0.65.3"
+    },
+    "pingo": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pingo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-VfEqAT1EaNyBXnFhg+djVYKCCgugpq8CyOz3ZvJCGjY=",
+            "type": "tarball",
+            "url": "https://css-ig.net/bin/pingo-win64.zip"
+        },
+        "version": "1.27.3"
+    },
+    "rebelle-7": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rebelle-7",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-hfuhaHZhITNWpurAhVOREE/EXZAzSLLHLK6P61BCT6c=",
+            "type": "url",
+            "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v7.2.8_Windows_64bit.exe"
+        },
+        "version": "7.2.8"
+    },
+    "xwintab": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "xwintab",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-nZ4aiY0ys5b/hP7+kXvUKKmkYSU9H3yTKh4x4+b1Jaw=",
+            "type": "tarball",
+            "url": "https://github.com/Graham--M/XWinTab/releases/download/v0.5.0/XWinTab.v0.5.0.zip"
+        },
+        "version": "0.5.0"
+    }
+}

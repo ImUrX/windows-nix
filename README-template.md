@@ -102,11 +102,7 @@ You can also pin the tarball url using tools like [niv].
 
 This overlay provides the following packages:
 
-- `copyDesktopIcons`
-- `pinga`
-- `pingo`
-- `rebelle-7`
-- `xwintab`
+@packageNames@
 
 [binary-cache]: https://app.cachix.org/cache/nix-community
 [flake-compat]: https://github.com/edolstra/flake-compat
