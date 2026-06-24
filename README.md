@@ -102,10 +102,13 @@ You can also pin the tarball url using tools like [niv].
 
 This overlay provides the following packages:
 
+- `autodesk-fusion`
 - `copyDesktopIcons`
+- `filmora-12`
 - `pinga`
 - `pingo`
 - `rebelle-7`
+- `wine-tkg`
 - `xwintab`
 
 [binary-cache]: https://app.cachix.org/cache/nix-community

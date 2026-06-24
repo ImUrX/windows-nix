@@ -1,6 +1,7 @@
 {
   nixpkgs,
   nixpkgs-wine-10,
+  nix-gaming,
   erosanix,
   ...
 }:
@@ -24,6 +25,7 @@ in
           copyDesktopIcons
           makeDesktopIcon
           ;
+        inherit (nix-gaming.packages.${prev.stdenv.hostPlatform.system}) wine-tkg;
         winSources = final.callPackage ../_sources/generated.nix { };
         wine10Wow64Packages = pkgsWine10.wineWow64Packages;
       }

@@ -1,12 +1,20 @@
+[autodesk-fusion]
+fetch.url = "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe"
+fetch.force = true
+src.manual = "0.0.0"
+url.name = "FusionClientInstaller.exe"
+
+[filmora-12]
+fetch.url = "https://download.wondershare.com/cbs_down/filmora_64bit_$ver_full846.exe"
+src.manual = "12.5.7"
+
 [pinga]
 fetch.tarball = "https://css-ig.net/bin/pinga-win64.zip"
-fetch.force = true
 src.webpage = "https://css-ig.net/pinga"
 src.regex = "v(\\d\\.\\d+\\.\\d+)"
 
 [pingo]
 fetch.tarball = "https://css-ig.net/bin/pingo-win64.zip"
-fetch.force = true
 src.webpage = "https://css-ig.net/pingo"
 src.regex = "v(\\d\\.\\d+\\.\\d+)"
 
@@ -14,6 +22,12 @@ src.regex = "v(\\d\\.\\d+\\.\\d+)"
 fetch.url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v$ver_Windows_64bit.exe"
 src.webpage = "https://www.escapemotions.com/products/rebelle/download.php"
 src.regex = "(7\\.\\d\\.\\d)"
+
+[webview2]
+fetch.url = "https://go.microsoft.com/fwlink/?linkid=2124701"
+fetch.force = true
+src.manual = "0.0.0"
+url.name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe"
 
 [xwintab]
 fetch.tarball = "https://github.com/Graham--M/XWinTab/releases/download/v$ver/XWinTab.v$ver.zip"

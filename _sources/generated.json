@@ -1,4 +1,34 @@
 {
+    "autodesk-fusion": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "autodesk-fusion",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "fusion_install.exe",
+            "sha256": "sha256-AOOODF/D4946Zu/DYwBz1H8zq/59IwmhR1bMIaN8Rfo=",
+            "type": "url",
+            "url": "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe"
+        },
+        "version": "0.0.0"
+    },
+    "filmora-12": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "filmora-12",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-iRF3yqd3zNSpElGVVGClu9e8OHknG6rvS79zAHb61Jg=",
+            "type": "url",
+            "url": "https://download.wondershare.com/cbs_down/filmora_64bit_12.5.7_full846.exe"
+        },
+        "version": "12.5.7"
+    },
     "pinga": {
         "cargoLock": null,
         "date": null,
@@ -41,6 +71,21 @@
             "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v7.2.8_Windows_64bit.exe"
         },
         "version": "7.2.8"
+    },
+    "webview2": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "webview2",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "webview_install.exe",
+            "sha256": "sha256-JBctIXghIWdSK5GZW5XdXS2tyOcxBZFTXRlFJO6gkOg=",
+            "type": "url",
+            "url": "https://go.microsoft.com/fwlink/?linkid=2124701"
+        },
+        "version": "0.0.0"
     },
     "xwintab": {
         "cargoLock": null,

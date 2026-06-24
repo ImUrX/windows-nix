@@ -29,10 +29,9 @@
       inputs.flake-compat.follows = "flake-compat";
     };
 
-    nix-update = {
-      url = "github:Mic92/nix-update";
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.treefmt-nix.follows = "treefmt-nix";
     };
   };
 

@@ -1,16 +1,18 @@
 {
   lib,
   mkWindowsAppNoCC,
+  coreutils,
+  findutils,
   wineWow64Packages,
-  winSources,
   makeDesktopItem,
   makeDesktopIcon,
   copyDesktopItems,
   copyDesktopIcons,
+  winSources,
 }:
 
 mkWindowsAppNoCC rec {
-  inherit (winSources.pinga)
+  inherit (winSources.autodesk-fusion)
     pname
     version
     src
@@ -22,7 +24,8 @@ mkWindowsAppNoCC rec {
   enableMonoBootPrompt = false;
   dontUnpack = true;
   wineArch = "win64";
-  wine = wineWow64Packages.stable;
+  wine = wineWow64Packages.staging;
+  enableVulkan = true;
 
   # `fileMap` can be used to set up automatic symlinks to files which need to be persisted.
   # The attribute name is the source path and the value is the path within the $WINEPREFIX.
@@ -30,7 +33,7 @@ mkWindowsAppNoCC rec {
   # To figure out what needs to be persisted, take at look at $(dirname $WINEPREFIX)/upper,
   # while the app is running.
   fileMap = {
-    "$HOME/.config/pinga.ini" = "drive_c/users/$USER/AppData/Local/pinga.ini";
+    "$HOME/.config/${pname}" = "drive_c/users/$USER/AppData/Roaming/Autodesk/";
   };
 
   nativeBuildInputs = [
@@ -46,7 +49,15 @@ mkWindowsAppNoCC rec {
   # WINEPREFIX, WINEARCH, AND WINEDLLOVERRIDES are set
   # and wine, winetricks, and cabextract are in the environment.
   winAppInstall = ''
-    wine "${src}/pinga.exe" /VERYSILENT /SUPPRESSMSGBOXES
+    winetricks -q corefonts vkd3d dotnet48 vcrun2015
+    wine ${winSources.webview2.src} /silent /install
+
+    mkdir -p "$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/Microsoft/Internet Explorer/Quick Launch/User Pinned"
+
+    ${coreutils}/bin/timeout -k 10m 9m wine ${src} --quiet
+    ${coreutils}/bin/sleep 5
+    ${coreutils}/bin/timeout -k 5m 1m wine ${src} --quiet
+    wineserver -k
   '';
 
   # This code runs before winAppRun, but only for the first instance.
@@ -62,7 +73,13 @@ mkWindowsAppNoCC rec {
   # Command line arguments are in $ARGS, not $@
   # DO NOT BLOCK. For example, don't run: wineserver -w
   winAppRun = ''
-    wine "$WINEPREFIX/drive_c/Program Files/pinga/pinga.exe" "$ARGS"
+    ACTUAL_DIR="$WINEPREFIX/drive_c/Program Files/Autodesk/webdeploy/production"
+    if [ "$1" = run ]; then
+      wine "$(${findutils}/bin/find "$ACTUAL_DIR" -iname fusion360.exe | head -1)" "$ARGS"
+    else
+      wine "$(${findutils}/bin/find "$ACTUAL_DIR" -name AdskIdentityManager.exe | head -1)" "$ARGS"
+    fi
+    wineserver -k
   '';
 
   # This code will run after winAppRun, but only for the first instance.
@@ -85,16 +102,21 @@ mkWindowsAppNoCC rec {
   desktopItems = [
     (makeDesktopItem {
       name = pname;
-      exec = pname;
+      exec = "${pname} run";
       icon = pname;
-      desktopName = "pinga";
-      genericName = "Image Optimizer";
-      categories = [ "Graphics" ];
-      mimeTypes = [
-        "image/jpeg"
-        "image/png"
-        "image/apng"
+      desktopName = "Autodesk Fusion";
+      genericName = "CAD Application";
+      categories = [
+        "Engineering"
+        "Graphics"
       ];
+    })
+    (makeDesktopItem {
+      name = "adskidmgr-opener";
+      exec = "${pname} %u";
+      desktopName = "adskidmgr Scheme Handler";
+      startupNotify = false;
+      mimeTypes = [ "x-scheme-handler/adskidmgr" ];
     })
   ];
 
@@ -104,8 +126,8 @@ mkWindowsAppNoCC rec {
   };
 
   meta = with lib; {
-    description = "pinga is an easy to use GUI, experimental image optimizer (PNG, JPEG, APNG) designed to be used for web context.";
-    homepage = "https://css-ig.net/pinga";
+    description = "A computer-aided design, computer-aided manufacturing, computer-aided engineering and printed circuit board design software application";
+    homepage = "https://filmora.wondershare.com/";
     license = licenses.unfree;
     maintainers = with maintainers; [
       imurx

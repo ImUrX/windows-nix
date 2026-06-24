@@ -7,6 +7,23 @@
   dockerTools,
 }:
 {
+  autodesk-fusion = {
+    pname = "autodesk-fusion";
+    version = "0.0.0";
+    src = fetchurl {
+      url = "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe";
+      name = "fusion_install.exe";
+      sha256 = "sha256-AOOODF/D4946Zu/DYwBz1H8zq/59IwmhR1bMIaN8Rfo=";
+    };
+  };
+  filmora-12 = {
+    pname = "filmora-12";
+    version = "12.5.7";
+    src = fetchurl {
+      url = "https://download.wondershare.com/cbs_down/filmora_64bit_12.5.7_full846.exe";
+      sha256 = "sha256-iRF3yqd3zNSpElGVVGClu9e8OHknG6rvS79zAHb61Jg=";
+    };
+  };
   pinga = {
     pname = "pinga";
     version = "0.65.3";
@@ -29,6 +46,15 @@
     src = fetchurl {
       url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v7.2.8_Windows_64bit.exe";
       sha256 = "sha256-hfuhaHZhITNWpurAhVOREE/EXZAzSLLHLK6P61BCT6c=";
+    };
+  };
+  webview2 = {
+    pname = "webview2";
+    version = "0.0.0";
+    src = fetchurl {
+      url = "https://go.microsoft.com/fwlink/?linkid=2124701";
+      name = "webview_install.exe";
+      sha256 = "sha256-JBctIXghIWdSK5GZW5XdXS2tyOcxBZFTXRlFJO6gkOg=";
     };
   };
   xwintab = {

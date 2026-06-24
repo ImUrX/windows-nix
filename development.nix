@@ -4,7 +4,6 @@
   self,
   treefmt-nix,
   nvfetcher,
-  nix-update,
   ...
 }:
 flake-utils.lib.eachDefaultSystem (
@@ -22,7 +21,6 @@ flake-utils.lib.eachDefaultSystem (
       packages = [
         pkgs.git
         nvfetcher.packages.${pkgs.stdenv.hostPlatform.system}.default
-        nix-update.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 
