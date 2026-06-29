@@ -12,7 +12,7 @@
     version = "0.0.0";
     src = fetchurl {
       url = "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe";
-      name = "fusion_install.exe";
+      name = "FusionClientInstaller.exe";
       sha256 = "sha256-AOOODF/D4946Zu/DYwBz1H8zq/59IwmhR1bMIaN8Rfo=";
     };
   };
@@ -53,8 +53,8 @@
     version = "0.0.0";
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
-      name = "webview_install.exe";
-      sha256 = "sha256-JBctIXghIWdSK5GZW5XdXS2tyOcxBZFTXRlFJO6gkOg=";
+      name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
+      sha256 = "sha256-yO6gqaeT0W30O+t/44c8bFyrXpEZz8vFk1jzEc2ORxM=";
     };
   };
   xwintab = {
