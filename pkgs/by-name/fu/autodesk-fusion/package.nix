@@ -1,7 +1,6 @@
 {
   lib,
   mkWindowsAppNoCC,
-  coreutils,
   findutils,
   wineWow64Packages,
   makeDesktopItem,
@@ -49,14 +48,26 @@ mkWindowsAppNoCC rec {
   # WINEPREFIX, WINEARCH, AND WINEDLLOVERRIDES are set
   # and wine, winetricks, and cabextract are in the environment.
   winAppInstall = ''
-    winetricks -q corefonts vkd3d dotnet48 vcrun2015
+    winetricks -q -f atmlib gdiplus corefonts cjkfonts dotnet20 dotnet48 msxml4 msxml6 vcrun2015 vcrun2022 fontsmooth=rgb winhttp win10
+    winetricks -q cjkfonts
+    winetricks -q win11
+
+    # https://codeberg.org/Lolig4/Autodesk-Fusion-360-on-Linux/src/commit/3fe1f6ff88ff2db0f9661f179db4d2ef87e3f4af/files/setup/autodesk_fusion_installer_x86-64.sh#L1787
+    wine REG ADD "HKCU\Software\Wine\DllOverrides" /v "adpclientservice.exe" /t REG_SZ /d native /f
+    wine REG ADD "HKCU\Software\Wine\DllOverrides" /v "AdCefWebBrowser.exe" /t REG_SZ /d builtin /f
+    wine REG ADD "HKCU\Software\Wine\DllOverrides" /v "msvcp140" /t REG_SZ /d native /f
+    wine REG ADD "HKCU\Software\Wine\DllOverrides" /v "mfc140u" /t REG_SZ /d native /f
+    wine REG ADD "HKCU\Software\Wine\DllOverrides" /v "bcp47langs" /t REG_SZ /d "" /f
+    wine REG ADD "HKCU\Software\Wine\X11 Driver" /v "Managed" /t REG_SZ /d "Y" /f
+    wine REG ADD "HKCU\Software\Wine\X11 Driver" /v "Decorated" /t REG_SZ /d "Y" /f
+
     wine ${winSources.webview2.src} /silent /install
 
     mkdir -p "$WINEPREFIX/drive_c/users/$USER/AppData/Roaming/Microsoft/Internet Explorer/Quick Launch/User Pinned"
 
-    ${coreutils}/bin/timeout -k 10m 9m wine ${src} --quiet
-    ${coreutils}/bin/sleep 5
-    ${coreutils}/bin/timeout -k 5m 1m wine ${src} --quiet
+    timeout -k 10m 9m wine ${src} --quiet
+    sleep 5
+    timeout -k 5m 1m wine ${src} --quiet
     wineserver -k
   '';
 
@@ -74,11 +85,11 @@ mkWindowsAppNoCC rec {
   # DO NOT BLOCK. For example, don't run: wineserver -w
   winAppRun = ''
     ACTUAL_DIR="$WINEPREFIX/drive_c/Program Files/Autodesk/webdeploy/production"
-    if [ "$1" = run ]; then
-      wine "$(${findutils}/bin/find "$ACTUAL_DIR" -iname fusion360.exe | head -1)" "$ARGS"
-    else
-      wine "$(${findutils}/bin/find "$ACTUAL_DIR" -name AdskIdentityManager.exe | head -1)" "$ARGS"
-    fi
+    wine "$(${findutils}/bin/find "$ACTUAL_DIR" -name Fusion360.exe | head -1)" "$ARGS"
+    # if [ "$1" = run ]; then
+    # else
+    #   wine "$(${findutils}/bin/find "$ACTUAL_DIR" -name AdskIdentityManager.exe | head -1)" "$ARGS"
+    # fi
     wineserver -k
   '';
 
@@ -132,6 +143,7 @@ mkWindowsAppNoCC rec {
     maintainers = with maintainers; [
       imurx
     ];
+    broken = true;
     platforms = [ "x86_64-linux" ];
   };
 }
