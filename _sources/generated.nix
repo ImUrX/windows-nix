@@ -13,7 +13,7 @@
     src = fetchurl {
       url = "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe";
       name = "FusionClientInstaller.exe";
-      sha256 = "sha256-AOOODF/D4946Zu/DYwBz1H8zq/59IwmhR1bMIaN8Rfo=";
+      sha256 = "sha256-YyUKz4v0bU9fCFEu2VLX6jibQZyn3cWOA9z8yB1IqwE=";
     };
   };
   filmora-12 = {
