@@ -13,7 +13,7 @@
     src = fetchurl {
       url = "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe";
       name = "FusionClientInstaller.exe";
-      sha256 = "sha256-YyUKz4v0bU9fCFEu2VLX6jibQZyn3cWOA9z8yB1IqwE=";
+      sha256 = "sha256-8YvUmfLquq0FLzk2U9mNaudM9lH+0KOkPUOGTxxHWt8=";
     };
   };
   filmora-12 = {
@@ -54,7 +54,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-HUPvQjvRQQeWLGnFy2vLHFMZUPiLJXlQLFL7ZNa0TUo=";
+      sha256 = "sha256-OggQO+2KPZrv38msEKZy6mlgUWPy3LCNds/T4ERFEck=";
     };
   };
   xwintab = {
