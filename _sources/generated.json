@@ -37,11 +37,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "sha256": "sha256-Hos+/kuU3rWKdbV21HMt5cBBzwxSaj91iPc8ugeyBIw=",
+            "sha256": "sha256-0lqwxeh1q04Bs6/lb+r1Hk5ccAO3X66gaTUN9kWdVxM=",
             "type": "tarball",
             "url": "https://css-ig.net/bin/pinga-win64.zip"
         },
-        "version": "0.65.3"
+        "version": "0.66"
     },
     "pingo": {
         "cargoLock": null,
@@ -51,11 +51,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "sha256": "sha256-VfEqAT1EaNyBXnFhg+djVYKCCgugpq8CyOz3ZvJCGjY=",
+            "sha256": "sha256-1eERCMpRUCPkEMI7rDrv9uQvQgv2VI8Sl8K8TwU6GPY=",
             "type": "tarball",
             "url": "https://css-ig.net/bin/pingo-win64.zip"
         },
-        "version": "1.27.3"
+        "version": "1.28"
     },
     "rebelle-7": {
         "cargoLock": null,
