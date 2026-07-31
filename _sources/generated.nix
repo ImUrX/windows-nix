@@ -34,10 +34,10 @@
   };
   pingo = {
     pname = "pingo";
-    version = "1.28";
+    version = "1.28.5";
     src = fetchzip {
       url = "https://css-ig.net/bin/pingo-win64.zip";
-      sha256 = "sha256-1eERCMpRUCPkEMI7rDrv9uQvQgv2VI8Sl8K8TwU6GPY=";
+      sha256 = "sha256-gDYXsUuHgsyQsWv8rjtT3RmsXADoMeKLsHLKWp7GKjk=";
     };
   };
   rebelle-7 = {
@@ -54,7 +54,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-mRXJcwSXfi0Rh3sD4Hp/zdENQneyKXxaURPUFPxq5rM=";
+      sha256 = "sha256-BLnwjYOcjAbzSoWs6g2fFWjT2KowmndhmqpGuymt4Pg=";
     };
   };
   xwintab = {
