@@ -54,7 +54,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-BLnwjYOcjAbzSoWs6g2fFWjT2KowmndhmqpGuymt4Pg=";
+      sha256 = "sha256-fR7YvZSz/bGW/Dn8wCNh/5d4Z7Kzdr3VLpsqaRoVMZA=";
     };
   };
   xwintab = {
