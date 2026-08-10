@@ -26,18 +26,18 @@
   };
   pinga = {
     pname = "pinga";
-    version = "0.66.3";
+    version = "0.66.4";
     src = fetchzip {
       url = "https://css-ig.net/bin/pinga-win64.zip";
-      sha256 = "sha256-R3qxBXzPBD75T3ddacIOrKtL2CLo92+LCABTvRO9xkY=";
+      sha256 = "sha256-SezXeYdP8YGyPpRWBUE8LYm9XEvHxTYjk4C6xxPB1vQ=";
     };
   };
   pingo = {
     pname = "pingo";
-    version = "1.28.8";
+    version = "1.28.9";
     src = fetchzip {
       url = "https://css-ig.net/bin/pingo-win64.zip";
-      sha256 = "sha256-Za1HLpU5HpZR6qMBOQMqOTUTwdUpQDsTW2DxTURYIy4=";
+      sha256 = "sha256-+yA1uI/Uy0jitpaeIe+1wfOi51fJjJU9ZTtrHDvWYtc=";
     };
   };
   rebelle-7 = {
