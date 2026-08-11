@@ -37,7 +37,7 @@
     version = "1.28.9";
     src = fetchzip {
       url = "https://css-ig.net/bin/pingo-win64.zip";
-      sha256 = "sha256-+yA1uI/Uy0jitpaeIe+1wfOi51fJjJU9ZTtrHDvWYtc=";
+      sha256 = "sha256-2f1VT6DA/c+Yhh4r82SmLczKAoctO4Xe7y+FeJT4Vog=";
     };
   };
   rebelle-7 = {
@@ -54,7 +54,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-SsVTdeUkNbWq8uLnbYH1OaJgLOo41LZH9fqt5GfG4Hg=";
+      sha256 = "sha256-+NSrB0wioM0TZDTzfGs037ZOv4oyzkLgO9jyprUaOJI=";
     };
   };
   xwintab = {
