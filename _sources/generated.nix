@@ -28,7 +28,7 @@
     pname = "pinga";
     version = "0.67";
     src = fetchzip {
-      url = "https://css-ig.net/bin/pinga-win64.zip";
+      url = "https://css-ig.net/bin/pinga.zip";
       sha256 = "sha256-IzwzgSAtF5Qc7dtWekLFJb8I40BuJfhVhrslQrrAQHs=";
     };
   };
@@ -36,8 +36,8 @@
     pname = "pingo";
     version = "1.29";
     src = fetchzip {
-      url = "https://css-ig.net/bin/pingo-win64.zip";
-      sha256 = "sha256-cTSDN5eUqzit7uu5EN7D0BaILpGiqMUosA/0plarkmI=";
+      url = "https://css-ig.net/bin/pingo.zip";
+      sha256 = "sha256-wRgX7F8mIl+j/Rsq+8crdrEqiNEJorxUb6BEMG8VIJE=";
     };
   };
   rebelle-7 = {
@@ -54,7 +54,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-+NSrB0wioM0TZDTzfGs037ZOv4oyzkLgO9jyprUaOJI=";
+      sha256 = "sha256-asV6IUFHQqwaagO/lRagSIlzF87wSkmWeygwk+KcMbc=";
     };
   };
   xwintab = {

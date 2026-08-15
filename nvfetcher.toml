@@ -9,13 +9,13 @@ fetch.url = "https://download.wondershare.com/cbs_down/filmora_64bit_$ver_full84
 src.manual = "12.5.7"
 
 [pinga]
-fetch.tarball = "https://css-ig.net/bin/pinga-win64.zip"
+fetch.tarball = "https://css-ig.net/bin/pinga.zip"
 fetch.force = true
 src.webpage = "https://css-ig.net/pinga"
 src.regex = "v(\\d\\.\\d+(?:\\.\\d+)?)"
 
 [pingo]
-fetch.tarball = "https://css-ig.net/bin/pingo-win64.zip"
+fetch.tarball = "https://css-ig.net/bin/pingo.zip"
 fetch.force = true
 src.webpage = "https://css-ig.net/pingo"
 src.regex = "v(\\d\\.\\d+(?:\\.\\d+)?)"
