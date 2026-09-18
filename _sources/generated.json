@@ -81,7 +81,7 @@
         "pinned": false,
         "src": {
             "name": "MicrosoftEdgeWebView2RuntimeInstallerX64.exe",
-            "sha256": "sha256-6+vF7BMDeP8atRPzkXvnkanPhPhJ6XCxaV/wGAGp00g=",
+            "sha256": "sha256-STrlhv8H7zaW2jveOutz1srKihwA53naiZ/xahWc824=",
             "type": "url",
             "url": "https://go.microsoft.com/fwlink/?linkid=2124701"
         },
