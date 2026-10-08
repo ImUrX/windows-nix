@@ -29,6 +29,21 @@
         },
         "version": "12.5.7"
     },
+    "filmora-16": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "filmora-16",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-qs7FLP2r8A6GhrY01JpTJqm73tWS0wJ6GNIOXsy0tTk=",
+            "type": "url",
+            "url": "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.12_full846.exe"
+        },
+        "version": "16.0.12"
+    },
     "pinga": {
         "cargoLock": null,
         "date": null,
@@ -86,6 +101,21 @@
             "url": "https://go.microsoft.com/fwlink/?linkid=2124701"
         },
         "version": "0.0.0"
+    },
+    "wine-mono": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "wine-mono",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Bx9LKIfhyXoR15H/PWW+lCnu1t7EwnCIiL/VRro1jiM=",
+            "type": "url",
+            "url": "https://dl.winehq.org/wine/wine-mono/10.4.1/wine-mono-10.4.1-x86.msi"
+        },
+        "version": "10.4.1"
     },
     "xwintab": {
         "cargoLock": null,

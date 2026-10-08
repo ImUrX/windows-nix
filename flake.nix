@@ -6,8 +6,11 @@
 
     nixpkgs-wine-10.url = "github:NixOS/nixpkgs/f214de98544a6acf0d9917ba265ac50849048fcb";
 
-    erosanix.url = "github:emmanuelrosa/erosanix";
-    erosanix.inputs.nixpkgs.follows = "nixpkgs";
+    erosanix = {
+      url = "github:emmanuelrosa/erosanix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-compat.follows = "flake-compat";
+    };
 
     systems.url = "github:nix-systems/default-linux";
 

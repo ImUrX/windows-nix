@@ -24,6 +24,14 @@
       sha256 = "sha256-iRF3yqd3zNSpElGVVGClu9e8OHknG6rvS79zAHb61Jg=";
     };
   };
+  filmora-16 = {
+    pname = "filmora-16";
+    version = "16.0.12";
+    src = fetchurl {
+      url = "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.12_full846.exe";
+      sha256 = "sha256-qs7FLP2r8A6GhrY01JpTJqm73tWS0wJ6GNIOXsy0tTk=";
+    };
+  };
   pinga = {
     pname = "pinga";
     version = "0.67";
@@ -55,6 +63,14 @@
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
       sha256 = "sha256-rCLs3BnFuIuH8/p1LADalUFlOo9cDF/Eo7K26+ZZH2k=";
+    };
+  };
+  wine-mono = {
+    pname = "wine-mono";
+    version = "10.4.1";
+    src = fetchurl {
+      url = "https://dl.winehq.org/wine/wine-mono/10.4.1/wine-mono-10.4.1-x86.msi";
+      sha256 = "sha256-Bx9LKIfhyXoR15H/PWW+lCnu1t7EwnCIiL/VRro1jiM=";
     };
   };
   xwintab = {

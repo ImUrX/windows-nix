@@ -8,6 +8,12 @@ url.name = "FusionClientInstaller.exe"
 fetch.url = "https://download.wondershare.com/cbs_down/filmora_64bit_$ver_full846.exe"
 src.manual = "12.5.7"
 
+# Lists every Filmora release, newest first.
+[filmora-16]
+fetch.url = "https://download.wondershare.com/cbs_down/filmora_64bit_$ver_full846.exe"
+src.webpage = "https://crm.wondershare.com/api/v1/support/846/release-versions"
+src.regex = '"version_name":"(16\.\d+\.\d+)"'
+
 [pinga]
 fetch.tarball = "https://css-ig.net/bin/pinga.zip"
 fetch.force = true
@@ -30,6 +36,11 @@ fetch.url = "https://go.microsoft.com/fwlink/?linkid=2124701"
 fetch.force = true
 src.manual = "0.0.0"
 url.name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe"
+
+# The Wine Mono version that the Wine used by autodesk-fusion expects.
+[wine-mono]
+fetch.url = "https://dl.winehq.org/wine/wine-mono/$ver/wine-mono-$ver-x86.msi"
+src.cmd = '''curl -sfL "https://gitlab.winehq.org/wine/wine/-/raw/wine-$(nix eval --raw .#autodesk-fusion.wine.version)/dlls/appwiz.cpl/addons.c" | sed -nE 's/^#define MONO_VERSION "(.*)"/\1/p' '''
 
 [xwintab]
 fetch.tarball = "https://github.com/Graham--M/XWinTab/releases/download/v$ver/XWinTab.v$ver.zip"
