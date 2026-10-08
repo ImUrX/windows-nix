@@ -79,13 +79,15 @@ mkWindowsAppNoCC rec {
   # Use this to do any cleanup after the app has terminated
   winAppPostRun = "";
 
-  # This is a normal mkDerivation installPhase, with some caveats.
-  # The launcher script will be installed at $out/bin/.launcher
-  # DO NOT DELETE OR RENAME the launcher. Instead, link to it as shown.
   installPhase = ''
     runHook preInstall
 
-    ln -s $out/bin/.launcher $out/bin/${pname}
+    OLD_LAUNCHER=$out/bin/.launcher
+    NEW_LAUNCHER=$out/bin/${pname}
+    # Correct `MY_PATH` in launcher script
+    substituteInPlace $OLD_LAUNCHER \
+      --replace-fail $OLD_LAUNCHER $NEW_LAUNCHER
+    mv $OLD_LAUNCHER $NEW_LAUNCHER
 
     runHook postInstall
   '';
