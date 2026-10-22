@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   format:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v7
     - uses: cachix/install-nix-action@v31
@@ -15,7 +15,7 @@ jobs:
         nix fmt -- --ci
 
   check-readme:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v7
     - uses: cachix/install-nix-action@v31
