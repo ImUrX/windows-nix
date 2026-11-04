@@ -34,10 +34,10 @@
   };
   pinga = {
     pname = "pinga";
-    version = "0.67";
+    version = "1.00";
     src = fetchzip {
       url = "https://css-ig.net/bin/pinga.zip";
-      sha256 = "sha256-IzwzgSAtF5Qc7dtWekLFJb8I40BuJfhVhrslQrrAQHs=";
+      sha256 = "sha256-2Svd8ZZlyxB8+Qi06jml0mNzRPplqOwYkvgXQGGnhfE=";
     };
   };
   pingo = {
