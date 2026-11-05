@@ -37,7 +37,7 @@
     version = "1.00";
     src = fetchzip {
       url = "https://css-ig.net/bin/pinga.zip";
-      sha256 = "sha256-2Svd8ZZlyxB8+Qi06jml0mNzRPplqOwYkvgXQGGnhfE=";
+      sha256 = "sha256-xVXIZfKf2S4HZpu9w9lY3z6S90YqOv1olc1NNGgwtWI=";
     };
   };
   pingo = {
