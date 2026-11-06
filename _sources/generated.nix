@@ -37,7 +37,7 @@
     version = "1.00";
     src = fetchzip {
       url = "https://css-ig.net/bin/pinga.zip";
-      sha256 = "sha256-xVXIZfKf2S4HZpu9w9lY3z6S90YqOv1olc1NNGgwtWI=";
+      sha256 = "sha256-b4FEvFCWOPc8YQH1paSRBGnPCJeExMQRfbANCWByDtI=";
     };
   };
   pingo = {
@@ -62,7 +62,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-YoY/DwYRoWzPEktPFWUMO2ZiRQTrp0183h4q5dlRJJs=";
+      sha256 = "sha256-JogwivVXU8Yv2k6BQAJOIwwf/Ba3wJGyWIlXLzjf9ug=";
     };
   };
   wine-mono = {
