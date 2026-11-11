@@ -26,10 +26,10 @@
   };
   filmora-16 = {
     pname = "filmora-16";
-    version = "16.0.12";
+    version = "16.0.16";
     src = fetchurl {
-      url = "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.12_full846.exe";
-      sha256 = "sha256-qs7FLP2r8A6GhrY01JpTJqm73tWS0wJ6GNIOXsy0tTk=";
+      url = "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.16_full846.exe";
+      sha256 = "sha256-TaK+sc7/0zBGVpimIR/9fIUx1O3Ks3rDMQiImgyjk+g=";
     };
   };
   pinga = {
@@ -37,7 +37,7 @@
     version = "1.00";
     src = fetchzip {
       url = "https://css-ig.net/bin/pinga.zip";
-      sha256 = "sha256-rvTBosK/7FfFXEhcU7YmGFQ0qlpwhVU6OF8qCpXDNuw=";
+      sha256 = "sha256-IB3Xctk0+J2Ct3IdMBsd52wM2N7MhbgFPdxi5x/R9tE=";
     };
   };
   pingo = {
