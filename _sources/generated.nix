@@ -62,7 +62,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-HRyDjllxNDwGBBXafGMMPBynrTP7thzKZg88ESL0zKg=";
+      sha256 = "sha256-08vo/tsQQoLXRf/xBpk+/q1RrpT1WVpOdYBERql0+cM=";
     };
   };
   wine-mono = {
