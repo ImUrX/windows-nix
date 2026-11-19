@@ -25,10 +25,16 @@ fetch.force = true
 src.webpage = "https://css-ig.net/pingo"
 src.regex = "v(\\d\\.\\d+(?:\\.\\d+)?)"
 
-[rebelle-7]
+[rebelle7]
 fetch.url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v$ver_Windows_64bit.exe"
 src.webpage = "https://www.escapemotions.com/products/rebelle/download.php"
 src.regex = "(7\\.\\d\\.\\d)"
+
+[rebelle8]
+fetch.url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v$ver_Windows_64bit.exe"
+fetch.force = true
+src.webpage = "https://www.escapemotions.com/products/rebelle/download.php"
+src.regex = "(8\\.\\d\\.\\d)"
 
 [webview2]
 fetch.url = "https://go.microsoft.com/fwlink/?linkid=2124701"

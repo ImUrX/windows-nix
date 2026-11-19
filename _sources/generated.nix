@@ -48,12 +48,20 @@
       sha256 = "sha256-wRgX7F8mIl+j/Rsq+8crdrEqiNEJorxUb6BEMG8VIJE=";
     };
   };
-  rebelle-7 = {
-    pname = "rebelle-7";
+  rebelle7 = {
+    pname = "rebelle7";
     version = "7.2.8";
     src = fetchurl {
       url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v7.2.8_Windows_64bit.exe";
       sha256 = "sha256-hfuhaHZhITNWpurAhVOREE/EXZAzSLLHLK6P61BCT6c=";
+    };
+  };
+  rebelle8 = {
+    pname = "rebelle8";
+    version = "8.4.0";
+    src = fetchurl {
+      url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.0_Windows_64bit.exe";
+      sha256 = "sha256-ETMZXIdZFK0PAyFQDRVvskWzY+lyx5R9uqU/IgpVeNk=";
     };
   };
   webview2 = {

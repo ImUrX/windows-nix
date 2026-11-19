@@ -10,6 +10,8 @@ let
     callPackageWith
     concatMapAttrs
     mapAttrs
+    mergeAttrs
+    warnOnInstantiate
     ;
 
   extraArgs =
@@ -44,5 +46,10 @@ in
     let
       callPackage = callPackageWith (final // extraArgs final);
     in
-    mapAttrs (_: file: callPackage file { }) packageFiles;
+    mergeAttrs (mapAttrs (_: file: callPackage file { }) packageFiles) rec {
+      rebelle7 = callPackage ./by-name/re/rebelle8/package.nix {
+        pkgSource = (extraArgs final).winSources.rebelle7;
+      };
+      rebelle-7 = warnOnInstantiate "rebelle-7 has been renamed to rebelle7" rebelle7;
+    };
 }

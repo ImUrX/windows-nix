@@ -1,17 +1,20 @@
 {
   lib,
   mkWindowsAppNoCC,
-  wine10Wow64Packages,
+  wineWow64Packages,
   makeDesktopItem,
   makeDesktopIcon,
   copyDesktopItems,
   copyDesktopIcons,
   winSources,
   xwintab,
+  pkgSource ? winSources.rebelle8,
 }:
-
+let
+  major = lib.versions.major pkgSource.version;
+in
 mkWindowsAppNoCC rec {
-  inherit (winSources.rebelle-7)
+  inherit (pkgSource)
     pname
     version
     src
@@ -23,7 +26,7 @@ mkWindowsAppNoCC rec {
   enableMonoBootPrompt = false;
   dontUnpack = true;
   wineArch = "win64";
-  wine = wine10Wow64Packages.stable;
+  wine = wineWow64Packages.staging;
 
   # `fileMap` can be used to set up automatic symlinks to files which need to be persisted.
   # The attribute name is the source path and the value is the path within the $WINEPREFIX.
@@ -31,7 +34,8 @@ mkWindowsAppNoCC rec {
   # To figure out what needs to be persisted, take at look at $(dirname $WINEPREFIX)/upper,
   # while the app is running.
   fileMap = {
-    "$HOME/.config/${pname}" = "drive_c/users/$USER/AppData/Local/Escape Motions/Rebelle 7";
+    "$HOME/.config/${pname}${major}" =
+      "drive_c/users/$USER/AppData/Local/Escape Motions/Rebelle ${major}";
   };
 
   nativeBuildInputs = [
@@ -47,7 +51,7 @@ mkWindowsAppNoCC rec {
   # WINEPREFIX, WINEARCH, AND WINEDLLOVERRIDES are set
   # and wine, winetricks, and cabextract are in the environment.
   winAppInstall = ''
-    ${wine}/bin/wine ${src} /VERYSILENT /SUPPRESSMSGBOXES
+    $WINE ${src} /VERYSILENT /SUPPRESSMSGBOXES
 
     # Symlink XWinTab DLLs to system32
     SYS_DIR="$WINEPREFIX/drive_c/windows/system32"
@@ -70,7 +74,7 @@ mkWindowsAppNoCC rec {
   # DO NOT BLOCK. For example, don't run: wineserver -w
   winAppRun = ''
     export WINEDLLOVERRIDES="wintab32=n,b;$WINEDLLOVERRIDES"
-    ${wine}/bin/wine "$WINEPREFIX/drive_c/Program Files/Rebelle 7/Rebelle 7.exe" "$ARGS"
+    $WINE "$WINEPREFIX/drive_c/Program Files/Rebelle ${major}/Rebelle ${major}.exe" "$ARGS"
   '';
 
   # This code will run after winAppRun, but only for the first instance.
@@ -97,7 +101,7 @@ mkWindowsAppNoCC rec {
       name = pname;
       exec = pname;
       icon = pname;
-      desktopName = "Rebelle 7";
+      desktopName = "Rebelle ${major}";
       genericName = "Digital Painting";
       categories = [ "Graphics" ];
     })

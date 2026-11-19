@@ -107,6 +107,8 @@ This overlay provides the following packages:
 - `pinga`
 - `pingo`
 - `rebelle-7`
+- `rebelle7`
+- `rebelle8`
 - `xwintab`
 
 [binary-cache]: https://app.cachix.org/cache/nix-community

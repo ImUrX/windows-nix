@@ -72,11 +72,11 @@
         },
         "version": "1.29"
     },
-    "rebelle-7": {
+    "rebelle7": {
         "cargoLock": null,
         "date": null,
         "extract": null,
-        "name": "rebelle-7",
+        "name": "rebelle7",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -86,6 +86,21 @@
             "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v7.2.8_Windows_64bit.exe"
         },
         "version": "7.2.8"
+    },
+    "rebelle8": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rebelle8",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ETMZXIdZFK0PAyFQDRVvskWzY+lyx5R9uqU/IgpVeNk=",
+            "type": "url",
+            "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.0_Windows_64bit.exe"
+        },
+        "version": "8.4.0"
     },
     "webview2": {
         "cargoLock": null,
