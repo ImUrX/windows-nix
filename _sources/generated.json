@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-TaK+sc7/0zBGVpimIR/9fIUx1O3Ks3rDMQiImgyjk+g=",
+            "sha256": "sha256-YtbRenmkmXz0Fe9v3tg4NLKo1UORXWFE0Yv6obbfYNs=",
             "type": "url",
-            "url": "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.16_full846.exe"
+            "url": "https://download.wondershare.com/cbs_down/filmora_64bit_16.1.11_full846.exe"
         },
-        "version": "16.0.16"
+        "version": "16.1.11"
     },
     "pinga": {
         "cargoLock": null,
@@ -111,7 +111,7 @@
         "pinned": false,
         "src": {
             "name": "MicrosoftEdgeWebView2RuntimeInstallerX64.exe",
-            "sha256": "sha256-R7xROHr/lcEnXOOM+7tfurmbQ7MyFASYd7vNvMepcNU=",
+            "sha256": "sha256-RXadZoCallIFD4qRq1MpiBtlzEEj/nxzOEHe7775G/Y=",
             "type": "url",
             "url": "https://go.microsoft.com/fwlink/?linkid=2124701"
         },

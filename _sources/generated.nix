@@ -26,10 +26,10 @@
   };
   filmora-16 = {
     pname = "filmora-16";
-    version = "16.0.16";
+    version = "16.1.11";
     src = fetchurl {
-      url = "https://download.wondershare.com/cbs_down/filmora_64bit_16.0.16_full846.exe";
-      sha256 = "sha256-TaK+sc7/0zBGVpimIR/9fIUx1O3Ks3rDMQiImgyjk+g=";
+      url = "https://download.wondershare.com/cbs_down/filmora_64bit_16.1.11_full846.exe";
+      sha256 = "sha256-YtbRenmkmXz0Fe9v3tg4NLKo1UORXWFE0Yv6obbfYNs=";
     };
   };
   pinga = {
@@ -70,7 +70,7 @@
     src = fetchurl {
       url = "https://go.microsoft.com/fwlink/?linkid=2124701";
       name = "MicrosoftEdgeWebView2RuntimeInstallerX64.exe";
-      sha256 = "sha256-R7xROHr/lcEnXOOM+7tfurmbQ7MyFASYd7vNvMepcNU=";
+      sha256 = "sha256-RXadZoCallIFD4qRq1MpiBtlzEEj/nxzOEHe7775G/Y=";
     };
   };
   wine-mono = {
