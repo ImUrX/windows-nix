@@ -96,11 +96,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ETMZXIdZFK0PAyFQDRVvskWzY+lyx5R9uqU/IgpVeNk=",
+            "sha256": "sha256-30urWdfzD2wiwc+FkPfcCLCNVntoAqbzy16xmXLNbVM=",
             "type": "url",
-            "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.0_Windows_64bit.exe"
+            "url": "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.1_Windows_64bit.exe"
         },
-        "version": "8.4.0"
+        "version": "8.4.1"
     },
     "webview2": {
         "cargoLock": null,

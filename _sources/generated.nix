@@ -58,10 +58,10 @@
   };
   rebelle8 = {
     pname = "rebelle8";
-    version = "8.4.0";
+    version = "8.4.1";
     src = fetchurl {
-      url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.0_Windows_64bit.exe";
-      sha256 = "sha256-ETMZXIdZFK0PAyFQDRVvskWzY+lyx5R9uqU/IgpVeNk=";
+      url = "https://escapemotions1.b-cdn.net/products/rebelle/update/downloads/Rebelle_v8.4.1_Windows_64bit.exe";
+      sha256 = "sha256-30urWdfzD2wiwc+FkPfcCLCNVntoAqbzy16xmXLNbVM=";
     };
   };
   webview2 = {
